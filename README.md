@@ -4,7 +4,7 @@ This is a basic todo app API written in Java Spring Boot.
 ## USAGE
 ### GET
 ##### Get the names of all TODO lists
-```java
+```http
 GET /todo/v1/list
 ```
 - Response: Set<String>
@@ -17,7 +17,7 @@ GET /todo/v1/list
     ```
 
 ##### Get a TODO list by name
-```
+```http
 GET /todo/v1/list/{name}
 ```
 - Response: com.todo.entity.TodoList
@@ -46,7 +46,7 @@ GET /todo/v1/list/{name}
     ```
 
 ##### Get a TODO list item by ID
-```
+```http
 GET /todo/v1/{id}
 ```
 - Response: com.todo.entity.TodoItem
@@ -63,15 +63,15 @@ GET /todo/v1/{id}
 
 ### POST
 
-##### Create a new TODO list.
-```
+##### Create a new TODO list
+```http
 POST /todo/v1/list
 ```
 - Request Body: com.todo.entity.TodoList
 - Response: com.todo.entity.TodoList
 
-##### Create a new TODO list item for the list with the provided name.
-```
+##### Create a new TODO list item for the list with the provided name
+```http
 POST /todo/v1/list/{name}
 ```
 - Request Body: com.todo.entity.TodoItem
@@ -81,8 +81,8 @@ POST /todo/v1/list/{name}
 
 ### PUT
 
-##### Update an existing TODO list item by its ID.
-```
+##### Update an existing TODO list item by its ID
+```http
 PUT /todo/v1/todo/{id}
 ```
 - Request Body: com.todo.entity.TodoItem
@@ -92,7 +92,7 @@ PUT /todo/v1/todo/{id}
 ### DELETE
 
 ##### Delete an existing TODO list item by its ID
-```
+```http
 DELETE /todo/v1/todo/{name}/delete
 ```
 
