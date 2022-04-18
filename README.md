@@ -88,6 +88,11 @@ PUT /todo/v1/todo/{id}
 - Request Body: com.todo.entity.TodoItem
 - Response: com.todo.entity.TodoItem
 
+##### Toggle completion state of an existing TODO list item by its ID
+```http
+PUT /todo/v1/todo/{id}/toggle
+```
+- Response: com.todo.entity.TodoItem
 ---
 ### DELETE
 
