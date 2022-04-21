@@ -1,6 +1,10 @@
 package com.todo.entity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Transient;
 import java.util.Set;
 
 @Entity
@@ -11,14 +15,15 @@ public class TodoList {
     @GeneratedValue
     private int id;
 
-    @Column(name = "name", unique = true, updatable = true)
+    // @Column(name = "name", unique = true, updatable = true)
     private String name;
 
-    @Column(name = "description", updatable = true)
+    // @Column(name = "description", updatable = true)
     private String description;
 
-    @OneToMany
-    @JoinColumn(name = "todolist_id", referencedColumnName = "id")
+    @Transient
+    // @OneToMany
+    // @JoinColumn(name = "todolist_id", referencedColumnName = "id")
     private Set<TodoItem> todos;
 
     public TodoList() {
